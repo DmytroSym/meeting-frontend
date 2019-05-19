@@ -20,7 +20,7 @@ class ConfirmationButtons extends Component {
     this.setState({ isLoading: true }, () => {
       console.log(this.props.meetingid);
       console.log(this.props.start);
-      sendRequest(`http://localhost:5000/api/meeting/confirmation/${this.props.meetingid}?start=${this.props.start}&end=${this.props.end}`).then(() => {
+      sendRequest(`https://meeting-assistant-backend/api/meeting/confirmation/${this.props.meetingid}?start=${this.props.start}&end=${this.props.end}`).then(() => {
         this.setState({ confirmed: true });
       })
     })
